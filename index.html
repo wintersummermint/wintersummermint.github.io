@@ -1,0 +1,778 @@
+<!doctype html>
+<html lang="en">
+
+	<head>
+		<meta charset="utf-8">
+
+		<title>Flexbox Layout and Web Design</title>
+
+		<meta name="description" content="Laying out future web design with flexbox and css3 , Nixon Galario">
+		<meta name="author" content="Nixon Galario">
+
+		<meta name="apple-mobile-web-app-capable" content="yes">
+		<meta name="apple-mobile-web-app-status-bar-style" content="black-translucent">
+
+		<meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no, minimal-ui">
+		<link href='http://fonts.googleapis.com/css?family=Lato:400,700' rel='stylesheet' type='text/css'>
+		<link rel="stylesheet" href="css/reveal.css">
+		<link rel="stylesheet" href="css/theme/night.css" id="theme">
+		<link rel="stylesheet" href="css/style.css">
+		<!-- Code syntax highlighting -->
+		<link rel="stylesheet" href="lib/css/zenburn.css">
+
+		<!-- Printing and PDF exports -->
+		<script>
+			var link = document.createElement( 'link' );
+			link.rel = 'stylesheet';
+			link.type = 'text/css';
+			link.href = window.location.search.match( /print-pdf/gi ) ? 'css/print/pdf.css' : 'css/print/paper.css';
+			document.getElementsByTagName( 'head' )[0].appendChild( link );
+		</script>
+
+		<!--[if lt IE 9]>
+		<script src="lib/js/html5shiv.js"></script>
+		<![endif]-->
+	</head>
+
+	<body style="font-family: 'Lato', sans-serif;">
+
+		<div class="reveal">
+
+			<!-- Any section element inside of this container is displayed as a slide -->
+			<div class="slides">
+				<section>
+					<h1>Laying out future web design with <span id="flexnow">flexbox</span> and css3</h1>
+					<h3></h3>
+					<br>
+					<p>
+						<small><a href="http://nixongalario.com">Nixon Galario</a> / <a href="https://www.linkedin.com/in/nixon-gwin-galario-b7a014b8">Nixon Galario</a></small><br>
+						<small>Front-End Developer</small>
+					</p>
+				</section>
+
+
+				<section>
+					<img src="gifs/Content-is-like-water-1980.jpg" height="600px;">
+				</section>
+				<!-- Example of nested vertical slides -->
+				<section data-background="#b5533c">
+
+					<section data-transition="none">
+						<div>
+							<h2>A little history</h2>
+						<br>
+						<br>
+						<div>
+							<ol class="timeline-ol">
+								<li class="timeline-li" id="active">
+							    1995
+							    <span class="details">
+							      Description of point 1
+							    </span>
+							  </li>
+							  <li class="timeline-li">
+							    2009
+							    <span class="details">
+							      Description of point 1
+							    </span>
+							  </li>
+							  <li class="timeline-li">
+							    2010
+							    <span class="details">
+							      Description of point 2
+							    </span>
+							  </li>
+							  <li class="timeline-li">
+							     2011
+							    <span class="details">
+							      Description of point 3
+							    </span>
+							  </li>
+							  <li class="timeline-li">
+							    2012
+							    <span class="details">
+							      Description of point 3
+							    </span>
+							  </li>
+							  <li class="timeline-li">
+							    2016
+							    <span class="details">
+							      Description of point 3
+							    </span>
+							  </li>
+							</ol>
+							<br>
+							<br>
+							<div class="">
+								<h3>1995 </h3>
+								<p>Web design is not as good today</p>
+								<br>
+							</div>
+						</div>
+						</div>
+					</section>
+					<section data-transition="none">
+						<img src="gifs/pizzahut.png" height="600px" width="auto" >
+					</section>	
+					<section data-transition="none">
+							<img src="gifs/yahoo.jpg" height="400px" width="auto" >
+							<img src="gifs/IE old.gif" height="100px" width="auto">
+							<img src="gifs/cow old.gif" height="100px" width="auto">
+					</section>
+					
+					<section data-transition="none">
+						<img src="gifs/craigs.jpg" height="500px" width="auto">
+					</section data-transition="none">
+					<section data-transition="none">
+						They Use HTML tables for layout
+						<img src="gifs/tablesold.gif" height="auto" width="1200px">
+						<p>33% of users were still browsing with IE5 in mid-2003, impossible to make a tableless website that would render in IE5 properly</p>
+					</section>
+					<section data-transition="none">
+						<p>Mobile Wap! </p>
+						<img src="gifs/nokia-n70.jpg" height="400px" width="300px">
+						<img src="gifs/oldwiki.jpg"  height="auto" width="300px">
+					</section>
+					<section data-transition="none">
+						<img src="gifs/iphone_3gs.png" height="500px" width="auto" style="border:none;background:none;box-shadow:none;">
+					</section>
+					<section data-transition="none">
+						<img src="gifs/screen-sizes.png" height="500px" width="auto" style="border:none;background:none;box-shadow:none;">
+					</section>
+					<section data-transition="none">
+						<img src="gifs/butwhat.gif" height="500px" width="auto" style="border:none;background:none;box-shadow:none;">
+					</section>
+					<section data-background="#4673AF" data-transition="none">
+						<p>Media Queries! </p>
+						<img src="gifs/responsive-demo1.gif" height="500px" width="auto" style="border:none;background:none;box-shadow:none;">
+					</section>
+					
+					<section data-transition="none">
+						<!-- <h2>A little history</h2> -->
+						<br>
+						<br>
+						<div>
+							<ol class="timeline-ol">
+								<li class="timeline-li">
+							    1995
+							    <span class="details">
+							      Description of point 1
+							    </span>
+							  </li>
+							  <li class="timeline-li" id="active">
+							    2009
+							    <span class="details">
+							      Description of point 1
+							    </span>
+							  </li>
+							  <li class="timeline-li">
+							    2010
+							    <span class="details">
+							      Description of point 2
+							    </span>
+							  </li>
+							  <li class="timeline-li">
+							     2011
+							    <span class="details">
+							      Description of point 3
+							    </span>
+							  </li>
+							  <li class="timeline-li">
+							    2012
+							    <span class="details">
+							      Description of point 3
+							    </span>
+							  </li>
+							  <li class="timeline-li">
+							    2016
+							    <span class="details">
+							      Description of point 3
+							    </span>
+							  </li>
+							</ol>
+							<br>
+							<br>
+							<div class="">
+								<h3>2009 : </h3>
+								<p> Original Flexbox as working draft. Chrome and Safari has partial support uses Old syntax *box</p>
+								<br>
+<pre><code class="css">
+	.flex-container {
+		display : box ; /* old */
+	}
+
+</code></pre><br>
+							</div>
+						</div>
+					</section>
+
+					<section data-transition="none">
+						<!-- <h2>A little history</h2> -->
+						<br>
+						<br>
+						<br>
+						<div>
+							<ol class="timeline-ol">
+								<li class="timeline-li">
+							    1995
+							    <span class="details">
+							      Description of point 1
+							    </span>
+							  </li>
+							  <li class="timeline-li">
+							    2009
+							    <span class="details">
+							      Description of point 1
+							    </span>
+							  </li>
+							  <li class="timeline-li" id="active">
+							    2010
+							    <span class="details">
+							      Description of point 2
+							    </span>
+							  </li>
+							  <li class="timeline-li">
+							     2011
+							    <span class="details">
+							      Description of point 3
+							    </span>
+							  </li>
+							  <li class="timeline-li">
+							    2012
+							    <span class="details">
+							      Description of point 3
+							    </span>
+							  </li>
+							  <li class="timeline-li">
+							    2016
+							    <span class="details">
+							      Description of point 3
+							    </span>
+							  </li>
+							</ol>
+							<br>
+							<br>
+							<div class="">
+								<h3>2010 : </h3>
+								<p> Partially supported by webkit browsers but then spec killed!</p>
+								<img src="gifs/whatt.gif" height="300px" width="auto" class="fragment fade-in" >
+							</div>
+						</div>
+					</section>
+
+					<section data-transition="none">
+						<!-- <h2>A little history</h2> -->
+
+						<div>
+							<ol class="timeline-ol">
+								<li class="timeline-li">
+							    1995
+							    <span class="details">
+							      Description of point 1
+							    </span>
+							  </li>
+							  <li class="timeline-li">
+							    2009
+							    <span class="details">
+							      Description of point 1
+							    </span>
+							  </li>
+							  <li class="timeline-li">
+							    2010
+							    <span class="details">
+							      Description of point 2
+							    </span>
+							  </li>
+							  <li class="timeline-li" id="active">
+							     2011
+							    <span class="details">
+							      Description of point 3
+							    </span>
+							  </li>
+							  <li class="timeline-li">
+							    2012
+							    <span class="details">
+							      Description of point 3
+							    </span>
+							  </li>
+							  <li class="timeline-li">
+							    2016
+							    <span class="details">
+							      Description of point 3
+							    </span>
+							  </li>
+							</ol>
+							<br>
+							<br>
+							<div class="">
+								<h3>2011 : </h3>
+								<p> Arrival of Flexbox Spec also known as <a href="http://www.w3.org/TR/2012/WD-css3-flexbox-20120322/">Tweener Spec</a> only implemented in IE10. You should avoid it if possible.</p>
+							</div>
+						</div>
+					</section>
+
+					<section data-transition="none">
+						<!-- <h2>A little history</h2> -->
+						<br>
+						<br>
+						<br>
+						<div>
+							<ol class="timeline-ol">
+								<li class="timeline-li">
+							    1995
+							    <span class="details">
+							      Description of point 1
+							    </span>
+							  </li>
+							  <li class="timeline-li">
+							    2009
+							    <span class="details">
+							      Description of point 1
+							    </span>
+							  </li>
+							  <li class="timeline-li">
+							    2010
+							    <span class="details">
+							      Description of point 2
+							    </span>
+							  </li>
+							  <li class="timeline-li">
+							     2011
+							    <span class="details">
+							      Description of point 3
+							    </span>
+							  </li>
+							  <li class="timeline-li" id="active">
+							    2012
+							    <span class="details">
+							      Description of point 3
+							    </span>
+							  </li>
+							  <li class="timeline-li">
+							    2016
+							    <span class="details">
+							      Description of point 3
+							    </span>
+							  </li>
+							</ol>
+							<br>
+							<br>
+							<div class="">
+								<h3>2012 : </h3>
+								<p> Modern Spec Revision and it is the new hotness!, with excellent browser support</p>
+								<img src="gifs/happy.gif" height="300px" width="auto" class="fragment fade-in" >
+							</div>
+						</div>
+					</section>
+
+					<section data-transition="none">
+						<!-- <h2>A little history</h2> -->
+						<br>
+						<br>
+						<br>
+						<div>
+							<ol class="timeline-ol">
+								<li class="timeline-li">
+							    1995
+							    <span class="details">
+							      Description of point 1
+							    </span>
+							  </li>
+							  <li class="timeline-li">
+							    2009
+							    <span class="details">
+							      Description of point 1
+							    </span>
+							  </li>
+							  <li class="timeline-li">
+							    2010
+							    <span class="details">
+							      Description of point 2
+							    </span>
+							  </li>
+							  <li class="timeline-li">
+							     2011
+							    <span class="details">
+							      Description of point 3
+							    </span>
+							  </li>
+							  <li class="timeline-li" >
+							    2012
+							    <span class="details">
+							      Description of point 3
+							    </span>
+							  </li>
+							  <li class="timeline-li" id="active">
+							    2016
+							    <span class="details">
+							      Description of point 3
+							    </span>
+							  </li>
+							</ol>
+							<br>
+							<br>
+							<div class="">
+								<h3>2016 and Future : </h3>
+								<p> Time now and beyond!</p>
+								<img src="gifs/infinity.gif" height="300px" width="auto" class="fragment fade-in" >
+							</div>
+						</div>
+					</section>
+
+				</section>
+
+				<section>
+					<h2>What is Flexbox?</h2>
+					<p class="text-left">
+						The Flexbox Layout officially called <span class="blue">CSS Flexible Box Layout Module</span> is new layout module in CSS3 made to improve the items align, directions and order in the container even when they are with dynamic or even unknown size.
+						<br><br>
+						<p class="fragment fade-in text-left">Some points : </p>
+						<p class="fragment fade-in text-left"> -Flexbox is Flexible! You can grow or shrink and flex to fit available space. </p>
+						<p class="fragment fade-in text-left"> -Easy alignment means less Headache for accurate measurements </p>
+						<p class="fragment fade-in text-left"> -Item order (not on javascript!) </p>
+						<p class="fragment fade-in text-left"> - Easy syntax :D </p>
+					</p>
+
+				</section>
+				
+
+				<section data-background="#2D2D2D" data-transition="none">
+					<h2>Basics : Flexbox containers </h2>
+					<p>
+						<img src="gifs/flexbasic.png" height="300px" style="border:none;background:none;box-shadow:none;">
+						<br>
+						<small>Image credit: <a href="http://jonibologna.com/flexbox-cheatsheet/">Flexbox Cheatsheet</a></small>
+					</p>
+				</section>
+				<section data-background="#2D2D2D" data-transition="none">
+					<h2>Basics : Flexbox containers </h2>
+					<br>
+
+					<p>
+<pre style="font-size: 15px;font-weight:bold;"><code class="css">
+	.flex-container {
+		display : flex ;
+		flex-direction : row ; /* default / aligns left*/ 
+	}
+
+</code></pre><br>	<br>
+					<img src="gifs/flexbox-flex-direction-row.jpg" class="fade-in fragment" width="855px" style="border:none;background:none;box-shadow:none;">					
+					</p>
+				</section>
+				<section data-background="#2D2D2D" data-transition="none">
+					<h2>Basics : Flexbox containers </h2>
+					<br>
+					
+					<p>
+<pre style="font-size: 15px;font-weight:bold;"><code class="css">
+	.flex-container {
+		display : flex ;
+		flex-direction : column ; /* default / aligns left*/ 
+	}
+
+</code></pre>
+					<img src="gifs/flexbox-flex-direction-column.jpg" height="300px" style="border:none;background:none;box-shadow:none;">					
+					</p>
+				</section>
+
+				
+				<section data-transition="none">
+					
+<pre style="font-size: 15px;font-weight:bold;"><code class="css">
+	.flex-container {
+		flex-direction : row-reverse ; /* aligns right / like float right */ 
+	}
+
+</code></pre>
+				<img src="gifs/flexbox-flex-direction-row-reverse.jpg" width="855px" style="border:none;background:none;box-shadow:none;">
+				</section>
+				<section data-transition="none">
+<pre style="font-size: 15px;font-weight:bold;"><code class="css">
+	.flex-container {
+		flex-direction : column-reverse ;
+	}
+
+</code></pre>				
+					<img src="gifs/flexbox-flex-direction-column-reverse.jpg" width="855px" style="border:none;background:none;box-shadow:none;">
+				</section>
+
+				<section data-transition="none">
+					
+				<h1>Flexxy Time!</h1>
+				<div class="wrapper-a">
+					 
+ 					<a target="_blank" href="http://nixongalario.com/flexxytime" class="test-flexxy"><img src="gifs/patrick.gif" height="500px" style="border:none;background:none;box-shadow:none;"></a>
+					 <div class="tooltip">Click to try!</div>
+					</div>
+				</section>
+
+				<section data-transition="none">
+					
+				<h1>Flexxy Time!</h1>
+				<div style="height:500px">
+					 <h3>Flex-wrap property</h3>
+					 <p>wrap || wrap-reverse || nowrap</p>
+					 <br>
+<pre style="font-size: 15px;font-weight:bold;"><code class="css">
+	.flex-container {
+		 flex-wrap: wrap; /* nowrap || wrap-reverse */
+	}
+
+</code></pre>
+				</div>	
+				</section>
+
+				<section data-transition="none">
+					
+				<h1>Let's do Shorthand </h1>
+				<div style="height:500px">
+					 <h3>Flex-Flow : flex-direction || flex-wrap</h3>
+					 <br>
+<pre style="font-size: 15px;font-weight:bold;"><code class="css">
+	.flex-container {
+		Flex-Flow : /* row wrap */
+	}
+
+</code></pre>
+<br> <p>
+	Default value: <span style="color:#CF8181;">row nowrap</span>
+</p>
+				</div>	
+				</section>
+				<section>
+					<img src="gifs/divsorting.png" height="500px">
+				</section>
+
+				
+				<section data-transition="none">
+					<h1>Easily sort items! </h1>
+					<img src="gifs/saywhat.gif" height="400px">
+					
+				</section>
+
+				<section data-transition="none">
+					<h1>Easily sort items! </h1>
+					<img src="gifs/cats.gif" height="400px">
+				</section>
+
+
+				<section>
+					<img src="gifs/ordinal.png" height="500px">
+				</section>
+
+
+				<section>
+<pre style="font-size: 15px;font-weight:bold;"><code class="css">
+	.flex-item:first-child {
+	  -webkit-order: /integer/; /* Safari */
+	  order:         /integer/;
+}
+
+</code></pre>
+					<img src="gifs/order1.png" height="400px" width="850px">
+				</section>
+
+				<section data-transition="none">	
+					<h2>First CSS Problem?</h2>
+					<img src="gifs/center div.png" height="500px">
+				</section>
+
+				<section data-transition="none">
+					<h2>Flexbox Power!</h2>
+					<img src="gifs/centerdivfinally.gif" height="500px">
+					<h2>Vertical Centering</h2>
+				</section>
+
+				<section>
+					<h2>Insert</h2>
+					<p>
+						justify-content: center;
+					</p>
+					<img src="gifs/flexbox-justify-content-center.jpg" style="border:none;background:none;box-shadow:none;">
+				</section>
+
+				<section>
+					<h2>How to use it in Real World?</h2>
+					<img src="gifs/imagination.gif">
+				</section>
+				<section data-transition="none">
+					<img src="gifs/cssgrid.png" >
+					<p class="fragment fade-out">
+						Float
+						<br>
+						Width
+						<br>
+						Clear
+					</p>
+					
+					
+				</section>
+				<section data-transition="none">
+					<img src="gifs/cssgrid.png" >
+					<p style="text-decoration: line-through;">
+						Float
+						<br>
+						Width
+						<br>
+						Clear
+					</p>
+					
+					
+				</section>
+
+				<section data-transition="none">
+					<img src="gifs/cssgrid.png" >
+					<h2>Flex item to </h2>
+					<p>flex : 1 ; </p>
+					
+					
+				</section>
+				<section data-transition="none">
+				<h1>Basic Layout</h1>
+					<img src="gifs/basic layout.png" >
+				</section>
+				<section data-transition="none">
+					
+				<h1>Flexxy Time 2!</h1>
+				<div class="wrapper-a">
+	
+ 					<a target="_blank" href="http://nixongalario.com/flexxytime2" class="test-flexxy"><img src="gifs/flexxy2.gif" height="500px" style="border:none;background:none;box-shadow:none;"></a>
+					 <div class="tooltip">Click to try!</div>
+					</div>
+				</section>	
+				
+				<section>
+					<img src="gifs/flexshort.png"><br>
+					<a href="https://css-tricks.com/snippets/css/a-guide-to-flexbox/">More Guide Here</a>
+				</section>
+
+				<section>
+<pre style="font-size: 15px;font-weight:bold;"><code class="css">
+	.flex-container {
+	 	/*display: flex;
+        flex-flow: row wrap;*/
+      }
+      .nav {
+        /*flex: 1;*/
+        /* order: 1; */
+      }
+
+      .content {
+        /*flex: 4;*/
+      }
+
+      .sidebar {
+        /*flex: 2;*/
+      }
+
+      .header,
+      .footer {
+        /*flex: 100%;*/
+        text-align: center;
+      }
+
+</code></pre>
+				</section>
+				<section>
+					<h2>Combine Flexbox and Media Query!</h2>
+				</section>
+				<section>
+<pre style="font-size: 15px;font-weight:bold;"><code class="css">
+	 @media (max-width: 700px) {
+        .nav {
+          flex: 100%;
+        }
+        
+        .nav li {
+          display: inline;
+        }
+      }
+
+      @media (max-width: 500px) {
+        .content,
+        .sidebar {
+          flex: 100%;
+        }
+      }
+
+</code></pre>
+				</section>
+				<section data-transition="none">
+					<h3>Got a problem on buttons? with Unknown number of Items?</h3>
+				</section>
+				<section data-transition="none">
+				<p>Height problem</p>
+					<img src="gifs/last.png">
+				</section>
+
+				<section>
+					<h3>display : flex ;</h3>
+					<p>it gives ideal adjusting responsiveness !!</p>
+					<a href="http://nixongalario/flexxytime2/index2.html">Solve it here</a>
+				</section>
+				<section data-transition="none">
+					<img src="gifs/last2.png">
+				</section>
+				<section>
+					<h3>Summary</h3>
+					<p class="fragment fade-in">Flexible layouts</p>
+					<p class="fragment fade-in">Distribute Extra Space</p>
+					<p class="fragment fade-in">Align Content </p>
+					<p class="fragment fade-in">Align Items on container or individually</p>
+					<p class="fragment fade-in">Real World Example</p>
+				</section>
+				<section>
+					<h3>Use it on your next project</h3>
+					<img src="gifs/go.gif" class="fragment fade-in">
+					
+				</section>
+				<section>
+					<h1>Laying out future web design with <span id="flexnow">flexbox</span> and css3</h1>
+					<h3></h3>
+					<br>
+					<p>
+						Resource and Example <a href="http://nixongalario.com">: http://nixongalario.com </a>
+						<br>
+						Email me : nixongalario@gmail.com
+					</p>
+				</section>
+
+
+				<section style="text-align: left;">
+					<h1>THE END</h1>
+				</section>
+
+			</div>
+
+		</div>
+
+		<script src="lib/js/head.min.js"></script>
+		<script src="js/reveal.js"></script>
+
+		<script>
+
+			// Full list of configuration options available at:
+			// https://github.com/hakimel/reveal.js#configuration
+			Reveal.initialize({
+				controls: true,
+				progress: true,
+				history: true,
+				center: true,
+
+				transition: 'slide', // none/fade/slide/convex/concave/zoom
+
+				// Optional reveal.js plugins
+				dependencies: [
+					{ src: 'lib/js/classList.js', condition: function() { return !document.body.classList; } },
+					{ src: 'plugin/markdown/marked.js', condition: function() { return !!document.querySelector( '[data-markdown]' ); } },
+					{ src: 'plugin/markdown/markdown.js', condition: function() { return !!document.querySelector( '[data-markdown]' ); } },
+					{ src: 'plugin/highlight/highlight.js', async: true, callback: function() { hljs.initHighlightingOnLoad(); } },
+					{ src: 'plugin/zoom-js/zoom.js', async: true },
+					{ src: 'plugin/notes/notes.js', async: true }
+				]
+			});
+
+		</script>
+
+	</body>
+</html>
